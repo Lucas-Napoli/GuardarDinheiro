@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savings Tracker</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #fdfdfd;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 5px;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-top: 0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+            max-width: 400px;
+            margin-top: 20px;
+        }
+        .cell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            font-size: 1.2em;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.3s;
+        }
+        .cell.clicked {
+            text-decoration: line-through;
+            color: #888;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>$2500</h1>
+    <h2>Savings Tracker</h2>
+
+    <div class="grid">
+        <!-- Repita as células com os valores desejados -->
+        <div class="cell" onclick="toggleStrike(this)">$25</div>
+        <div class="cell" onclick="toggleStrike(this)">$20</div>
+        <div class="cell" onclick="toggleStrike(this)">$15</div>
+        <div class="cell" onclick="toggleStrike(this)">$50</div>
+        <div class="cell" onclick="toggleStrike(this)">$60</div>
+        <div class="cell" onclick="toggleStrike(this)">$100</div>
+        
+        <div class="cell" onclick="toggleStrike(this)">$150</div>
+        <div class="cell" onclick="toggleStrike(this)">$15</div>
+        <div class="cell" onclick="toggleStrike(this)">$60</div>
+        <div class="cell" onclick="toggleStrike(this)">$25</div>
+        <div class="cell" onclick="toggleStrike(this)">$75</div>
+        <div class="cell" onclick="toggleStrike(this)">$10</div>
+        
+        <div class="cell" onclick="toggleStrike(this)">$50</div>
+        <div class="cell" onclick="toggleStrike(this)">$20</div>
+        <div class="cell" onclick="toggleStrike(this)">$15</div>
+        <div class="cell" onclick="toggleStrike(this)">$150</div>
+        <div class="cell" onclick="toggleStrike(this)">$15</div>
+        <div class="cell" onclick="toggleStrike(this)">$50</div>
+
+        <div class="cell" onclick="toggleStrike(this)">$60</div>
+        <div class="cell" onclick="toggleStrike(this)">$75</div>
+        <div class="cell" onclick="toggleStrike(this)">$100</div>
+        <div class="cell" onclick="toggleStrike(this)">$50</div>
+        <div class="cell" onclick="toggleStrike(this)">$25</div>
+        <div class="cell" onclick="toggleStrike(this)">$40</div>
+
+        <div class="cell" onclick="toggleStrike(this)">$200</div>
+        <div class="cell" onclick="toggleStrike(this)">$15</div>
+        <div class="cell" onclick="toggleStrike(this)">$150</div>
+        <div class="cell" onclick="toggleStrike(this)">$30</div>
+        <div class="cell" onclick="toggleStrike(this)">$50</div>
+        <div class="cell" onclick="toggleStrike(this)">$15</div>
+
+        <div class="cell" onclick="toggleStrike(this)">$50</div>
+        <div class="cell" onclick="toggleStrike(this)">$25</div>
+        <div class="cell" onclick="toggleStrike(this)">$40</div>
+        <div class="cell" onclick="toggleStrike(this)">$75</div>
+        <div class="cell" onclick="toggleStrike(this)">$10</div>
+        <div class="cell" onclick="toggleStrike(this)">$150</div>
+
+        <div class="cell" onclick="toggleStrike(this)">$10</div>
+        <div class="cell" onclick="toggleStrike(this)">$200</div>
+        <div class="cell" onclick="toggleStrike(this)">$100</div>
+        <div class="cell" onclick="toggleStrike(this)">$50</div>
+        <div class="cell" onclick="toggleStrike(this)">$15</div>
+        <div class="cell" onclick="toggleStrike(this)">$60</div>
+    </div>
+
+    <script>
+        function toggleStrike(element) {
+            element.classList.toggle('clicked');
+        }
+    </script>
+</body>
+</html>
